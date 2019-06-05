@@ -3,7 +3,10 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 
 Vue.use(Router);
-
+Router.prototype.goBack = function() {
+  this.isBack = true
+  window.history.go(-1)
+}
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,

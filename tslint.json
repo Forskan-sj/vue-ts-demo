@@ -9,11 +9,28 @@
     ]
   },
   "rules": {
-    "quotemark": [true, "single"],
+    "max-line-length": false,
+    "quotemark": [true, "single", "avoid-escape"],
+    "semicolon":[false, "never", "ignore-interfaces"],
     "indent": [true, "spaces", 2],
-    "interface-name": false,
+    "interface-name": true,
     "ordered-imports": false,
     "object-literal-sort-keys": false,
-    "no-consecutive-blank-lines": false
+    "no-consecutive-blank-lines": false,
+    "no-empty-interface": true,
+    "trailing-comma": [false, { // 对尾随逗号的校验
+      "multiline": {
+          "objects": "ignore",
+          "arrays": "never",
+          "functions": "never",
+          "typeLiterals": "ignore"
+      }
+    }],
+    "no-empty": false,
+    "no-debugger": false,
+    "no-eval": false,
+    "arrow-parens": true, // 箭头函数 参数需要括号
+    "esSpecCompliant": true, // 是否允许尾随逗号出现在剩余变量中
+    "no-console": false
   }
 }
