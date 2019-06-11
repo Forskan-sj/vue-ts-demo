@@ -44,6 +44,12 @@ export default class Home extends Vue {
     getCate('').then((response: object) => {
       console.log(response)
     })
+    this.$selfConfirm('ss', '确定', '否', (res: string) => {
+      console.log('reback fun:' + res)
+    })
+    this.$selfMsgBox('ss', '确定', (res: string) => {
+      console.log('reback fun:' + res)
+    })
   }
   private clicktest(): void {
   }

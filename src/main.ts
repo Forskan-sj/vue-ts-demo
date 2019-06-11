@@ -6,6 +6,11 @@ import store from '@/store';
 
 Vue.config.productionTip = false;
 import '@/styles/index.scss'
+import selfMsgBox from '@/components/selfMsgBox/index'
+Vue.use(selfMsgBox)
+
+import selfConfirm from '@/components/selfConfirm/index'
+Vue.use(selfConfirm)
 new Vue({
   router,
   store,
